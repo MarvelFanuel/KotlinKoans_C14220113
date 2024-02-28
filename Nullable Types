@@ -1,0 +1,18 @@
+fun sendMessageToClient(
+        client: Client?, message: String?, mailer: Mailer
+) {
+    val email = client?.personalInfo?.email
+    if (email != null && message != null) {
+        mailer.sendMessage(email, message)
+    }
+}
+
+class Client(val personalInfo: PersonalInfo?)
+class PersonalInfo(val email: String?)
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
+
+Kode tersebut menggunakan operator ?. dalam Kotlin untuk memastikan bahwa nilai yang mungkin null diakses dengan aman tanpa menyebabkan NullPointerException. jadi
+pertama ada bagian client dan juga string yang dicek apakah mungkin null atau tidak kemudian dilanjutkan digunakan untuk mengambil alamat email dari objek 
+klien dan memeriksa apakah pesan dan alamat email tidak null dan jika null bisa mengirim pesan menggunakan mailer.sendMessage.
