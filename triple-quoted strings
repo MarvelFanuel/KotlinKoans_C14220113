@@ -1,0 +1,13 @@
+const val question = "life, the universe, and everything"
+const val answer = 42
+
+val tripleQuotedString = """
+    #question = "$question"
+    #answer = $answer""".trimMargin("#")
+
+fun main() {
+    println(tripleQuotedString)
+}
+
+mengganti trimIndent dengan trimMargin diikuti dengan ("#") yang dimana sesuai dengan perintah yang disuruh di Kotlin Koansnya, kegunaanya sendiri sepengatahuan saya untuk 
+menghapus tanda "#" , tanda yang dihapus sesuai dengan apa yang didalam kurung setelah trimMargin maupun trimIndent
