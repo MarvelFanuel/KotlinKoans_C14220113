@@ -1,0 +1,12 @@
+val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+
+fun getPattern(): String = """\d{2} $month \d{4}"""
+
+dalam code yang ini dari awal dsudah dikasi format dari kotlin koansnya adalah tanggal 13 Juni 1992 dan diberikan contoh 13.06.1992 
+(two digits, a dot, two digits, a dot, four digits): fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
+
+namun mereka meminta untuk mengubah contoh tanggal mengganti 13 Jun 1992
+
+maka dari itu kita masi menggunakan format yang sama, dimana terdapat """ diawal dan diakhir diikuti dengan \ dan d kemudian {2} sebagai penanda jumlah digit tanggal, berbeda dengan
+sebelumnya yang mempunyai dot, di perintah kali ini tidak ada dan bulan diganti dengan huruf, maka yang awalnya \d{2} diganti dengan $month untuk memunculkan variable bulan kemudian
+untuk tahun masih sama \d{4}
